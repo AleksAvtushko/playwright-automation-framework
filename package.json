@@ -1,0 +1,40 @@
+{
+    "name": "playwright-automation-framework",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format:code": "prettier --write \"**/.js,.ts\" ",
+        "lint": "eslint ./**/*.{ts,json}",
+        "lint:fix": "eslint ./**/*.{ts,json} --quiet --fix",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AleksAvtushko/playwright-automation-framework.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "lint-staged": {
+        "*.ts": [
+            "npm run lint"
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/AleksAvtushko/playwright-automation-framework/issues"
+    },
+    "homepage": "https://github.com/AleksAvtushko/playwright-automation-framework#readme",
+    "devDependencies": {
+        "@playwright/test": "^1.28.1",
+        "@typescript-eslint/eslint-plugin": "^5.46.1",
+        "@typescript-eslint/parser": "^5.46.1",
+        "eslint": "8.22.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.1.0",
+        "prettier": "^2.8.1"
+    }
+}

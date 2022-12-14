@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+.db
+.log
+/helpFile.txt
+/test-results/
+/playwright-report/
+/playwright/.cache/
