@@ -2,10 +2,10 @@
 node_modules/
 .db
 .log
-/helpFile.txt
 /test-results/
 /playwright-report/
 /playwright/.cache/
 /allure-results
 /allure-report
 app.log
+/playwright-report
