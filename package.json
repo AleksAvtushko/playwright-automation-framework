@@ -5,6 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "playwright": "npx playwright test tests/onliner.spec.ts --headed --reporter=allure-playwright",
+        "allure:report": "npx allure generate ./allure-results --clean",
+        "alure:open": "npx allure open ./allure-report",
         "format:code": "prettier --write \"**/.js,.ts\" ",
         "lint": "eslint ./**/*.{ts,json}",
         "lint:fix": "eslint ./**/*.{ts,json} --quiet --fix",
@@ -30,11 +33,14 @@
         "@playwright/test": "^1.28.1",
         "@typescript-eslint/eslint-plugin": "^5.46.1",
         "@typescript-eslint/parser": "^5.46.1",
+        "allure-commandline": "^2.20.1",
+        "allure-playwright": "^2.0.0-beta.21",
         "eslint": "8.22.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "^8.0.0",
         "lint-staged": "^13.1.0",
+        "log4js": "^6.7.1",
         "prettier": "^2.8.1"
     }
 }
