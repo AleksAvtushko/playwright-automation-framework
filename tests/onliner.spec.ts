@@ -36,7 +36,7 @@ test.describe("check difference elements", () => {
     });
 });
 test.describe("test for cart", () => {
-    test("Check: add items to cart", async ({ page }) => {
+    test.skip("Check: add items to cart", async ({ page }) => {
         logger.info("INFO");
         await page.goto("https://catalog.onliner.by/console/sony/playstation5");
         const addConsoleToCart = page.locator(
@@ -64,6 +64,9 @@ test.describe("test for cart", () => {
         await expect(expectedConsoleToCart).toHaveText("Игровая приставка Sony PlayStation 5", { timeout: 5000 });
         logger.error("check error message");
         const removeItemFromCart1 = page.locator("[class='cart-form__control']").first();
+        await page.hover(
+            "[class='button-style button-style_auxiliary button-style_small cart-form__button cart-form__button_remove']",
+        );
         await removeItemFromCart1.click({ force: true, timeout: 30000 });
         const removeItemFromCart2 = page.locator(
             "[class='cart-form__link cart-form__link_other cart-form__link_small']:nth-child(2)",
