@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { logger } from "../configLogger";
+import { logger } from "../configLog4js";
 import { locatorsAndElementsPage } from "./locatorsAndElementsPage";
 
 test.describe("check difference elements", () => {

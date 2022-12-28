@@ -5,9 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "playwright": "npx playwright test tests/onliner.spec.ts --headed --reporter=allure-playwright",
-        "allure:report": "npx allure generate ./allure-results --clean",
-        "alure:open": "npx allure open ./allure-report",
+        "playwright": "npx playwright test tests/onliner.spec.ts --reporter=allure-playwright",
+        "allure:report": "npx allure generate ./allure-results --clean -o allure-report",
+        "alure:open": "npx allure open ./allure-report ",
         "format:code": "prettier --write \"**/.js,.ts\" ",
         "lint": "eslint ./**/*.{ts,json}",
         "lint:fix": "eslint ./**/*.{ts,json} --quiet --fix",
